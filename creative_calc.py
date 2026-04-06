@@ -131,6 +131,13 @@ def tourn_creative_calc_plotly(file, is_plot=False):
             data_frame=team_stat,
             x="potential",
             y="result",
+            text="Название",
+            hover_name="Название",
+        )
+        fig.update_traces(
+            textposition="top center",
+            textfont=dict(size=10),
+            cliponaxis=False,
         )
         x = team_stat["potential"].to_numpy()
         y = team_stat["result"].to_numpy()
